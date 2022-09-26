@@ -7,7 +7,7 @@ const mem = std.mem;
 const meta = std.meta;
 const time = std.time;
 
-const Decl = std.builtin.TypeInfo.Declaration;
+const Decl = std.builtin.Type.Declaration;
 
 pub fn benchmark(comptime B: type) !void {
     const args = if (@hasDecl(B, "args")) B.args else [_]void{{}};
